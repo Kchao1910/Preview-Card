@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --soft-blue: #8BACD9;
+  --cyan: #00FFF8;
+  --main-bg: #0D192C;
+  --card-bg: #15263F;
+  --line-color: #2E405A;
+}
+
+html {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  display: flex;
+  background-color: var(--main-bg);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+hr {
+  color: var(--line-color);
+  margin-bottom: 1rem;
+}
+
+.copy, .time-left, .author::before {
+  color: var(--soft-blue);
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: var(--card-bg);
+  border-radius: .9375rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  max-width: 21.875rem;
+}
+
+.image-container {
+  margin-bottom: 1.5rem;
+}
+
+.nft {
+  background-color: black;
+  border-radius: .5rem;
+}
+
+.nft, .zoom-icon {
+  position: absolute;
+}
+
+h1, .currency {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  margin-bottom: 1rem;
+}
+
+.time-left, .author, .time-left {
+  font-weight: 400;
+}
+
+.copy {
+  font-size: 1.125rem;
+  font-weight: 300;
+  max-width: 302px;
+  margin-bottom: 1.5rem;
+}
+
+.profile-picture {
+  background: black;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 1rem;
+  width: 33px;
+  height: 33px;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 301px;
+  margin-bottom: 1.5rem;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+}
+
+.nft-info {
+  display: flex;
+}
+
+.icon {
+  margin-right: .5rem;
+}
+
+.currency, .time-left {
+  line-height: 1.25rem;
+}
+
+.author::before {
+ content: "Creation of ";
+}
+
+h1, .author, .filter {
+  transition: all 0.2s ease-in-out;
+}
+
+h1:hover, .author:hover {
+  color: var(--cyan);
+}
+
+.zoom-icon {
+  visibility: hidden;
+}
+
+.filter:hover {
+  background-color: hsla(178, 100%, 50%, .503);
+}
+
+.filter:hover > .zoom-icon {
+  visibility: visible;
+}
+
+.image-container, .filter {
+  display: flex;
+  width: 302px;
+  height: 302px;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter {
+  border-radius: .5rem;
+  z-index: 2;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 20.4375rem;
+  }
+
+  .copy, .nft, .image-container, .filter {
+    width: 17.375rem;
+  }
+
+  .filter {
+    height: 17.375rem;
+  }
+}
